@@ -1,4 +1,4 @@
-# Transformer from Scratch — English to Italian Translation
+# # Attention Is All You Need — Implementation — English to Italian Translation
 
 A full implementation of the original **"Attention Is All You Need"** (Vaswani et al., 2017) Transformer architecture in PyTorch, built for sequence-to-sequence translation from English to Italian.
 
@@ -165,7 +165,7 @@ All parameters are centrally managed in `config.py` via `get_config()`.
 ## Project Structure
 
 ```
-Transformers-from-Scratch/
+Attention-Is-All-You-Need-Implementation/
 ├── assets/                          # Architecture and concept diagrams
 │   ├── image.png
 │   ├── image-1.png
@@ -191,8 +191,8 @@ Transformers-from-Scratch/
 
 ```bash
 # Clone the repo
-git clone https://github.com/Arunim10/Transformers-from-Scratch.git
-cd Transformers-from-Scratch
+git clone https://github.com/Arunim10/Attention-Is-All-You-Need-Implementation.git
+cd Attention-Is-All-You-Need-Implementation
 
 # Install dependencies
 pip install -r requirements.txt
