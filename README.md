@@ -166,13 +166,23 @@ All parameters are centrally managed in `config.py` via `get_config()`.
 
 ```
 Transformers-from-Scratch/
-├── model.py          # Full Transformer implementation
-├── dataset.py        # BillingualDataset and causal mask
-├── config.py         # Hyperparameters and weight path helpers
-├── train.py          # Training loop
-├── demo/             # Demo scripts
-├── demo.ipynb        # Interactive demo notebook
-└── requirements.txt
+├── assets/                          # Architecture and concept diagrams
+│   ├── image.png
+│   ├── image-1.png
+│   └── image-2.png
+├── Transformers/
+│   ├── model.py                     # Full Transformer implementation
+│   ├── dataset.py                   # BillingualDataset and causal mask
+│   ├── config.py                    # Hyperparameters and weight path helpers
+│   ├── train.py                     # Training loop
+│   ├── translate.py                 # Inference / greedy decoding
+│   ├── attention_visualization.ipynb # Attention head heatmaps
+│   ├── demo/                        # Demo scripts
+│   ├── demo.ipynb                   # Interactive demo notebook
+│   ├── tokenizer_en.json            # English BPE tokenizer
+│   ├── tokenizer_it.json            # Italian BPE tokenizer
+│   └── requirements.txt
+└── README.md
 ```
 
 ---
@@ -188,7 +198,10 @@ cd Transformers-from-Scratch
 pip install -r requirements.txt
 
 # Train the model
-python train.py
+python Transformers/train.py
+
+# Translate some english sentences to italian
+python Transformers/translate.py
 ```
 
 Weights are saved after each epoch to the `weights/` folder as `tmodel_{epoch}.pt`. To resume training from a checkpoint, set `"preload"` to the desired epoch string in `config.py`.
